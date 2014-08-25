@@ -3,7 +3,7 @@
 git checkout -b build
 VERSION=$1
 ./fetch.sh $VERSION
-git add lib package.json
+git add -f lib package.json
 git commit -m 'build $1'
 git tag $1
 git push origin $1
