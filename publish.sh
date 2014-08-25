@@ -1,6 +1,8 @@
 #!/bin/bash
 
 git checkout -b build
+rm -rf lib
+rm package.json
 VERSION=$1
 ./fetch.sh $VERSION
 git add -f lib package.json
