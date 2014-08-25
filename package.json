@@ -1,0 +1,43 @@
+{
+    "name": "pouchdb-browser-level",
+    "description": "PouchDB level addapter for the browser",
+    "main": "./index.js",
+    "homepage": "http://pouchdb.com/",
+    "repository": "https://github.com/pouchdb/pouchdb",
+    "keywords": [
+        "db",
+        "couchdb",
+        "pouchdb"
+    ],
+    "tags": [
+        "db",
+        "couchdb",
+        "pouchdb"
+    ],
+    "dependencies": {
+        "argsarray": "0.0.1",
+        "es3ify": "^0.1.3",
+        "inherits": "~2.0.1",
+        "level-sublevel": "~5.2.0",
+        "levelup": "~0.18.4",
+        "lie": "^2.6.0",
+        "pouchdb-extend": "^0.1.0",
+        "spark-md5": "0.0.5",
+        "through2": "^0.4.1"
+    },
+    "browser": {
+        "./deps/buffer": false,
+        "request": false,
+        "./lib/deps/ajax.js": "./lib/deps/ajax-browser.js",
+        "./lib/version.js": "./lib/version-browser.js",
+        "./lib/deps/migrate.js": "./migrate-browser.js",
+        "bluebird": "lie",
+        "leveldown": false
+    },
+    "browserify": {
+        "transform": [
+            "es3ify"
+        ]
+    },
+    "version": "3.0.2-alpha"
+}
